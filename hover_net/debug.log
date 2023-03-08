@@ -1,0 +1,138 @@
+|2023-03-07|21:56:05.894| [INFO] .... Detect #GPUS: 1
+|2023-03-07|21:56:06.042| [INFO] Generating new fontManager, this may take some time...
+|2023-03-07|21:56:28.228| [INFO] ........................ Done Assembling Case 12_p7
+|2023-03-08|16:02:43.781| [INFO] .... Detect #GPUS: 2
+|2023-03-08|16:02:48.793| [INFO] ................ Process: 2_6088_A_0037218
+|2023-03-08|16:02:48.808| [INFO] ................ WARNING: No mask found, generating mask via thresholding at 1.25x!
+|2023-03-08|16:02:51.336| [INFO] ........ Preparing Input Output Placement: 2.542633512057364
+|2023-03-08|16:03:12.868| [ERROR] Crash
+Traceback (most recent call last):
+  File "/opt/conda/envs/hovernet/lib/python3.6/site-packages/torch/utils/data/dataloader.py", line 779, in _try_get_data
+    data = self._data_queue.get(timeout=timeout)
+  File "/opt/conda/envs/hovernet/lib/python3.6/multiprocessing/queues.py", line 104, in get
+    if not self._poll(timeout):
+  File "/opt/conda/envs/hovernet/lib/python3.6/multiprocessing/connection.py", line 257, in poll
+    return self._poll(timeout)
+  File "/opt/conda/envs/hovernet/lib/python3.6/multiprocessing/connection.py", line 414, in _poll
+    r = wait([self], timeout)
+  File "/opt/conda/envs/hovernet/lib/python3.6/multiprocessing/connection.py", line 911, in wait
+    ready = selector.select(timeout)
+  File "/opt/conda/envs/hovernet/lib/python3.6/selectors.py", line 376, in select
+    fd_event_list = self._poll.poll(timeout)
+  File "/opt/conda/envs/hovernet/lib/python3.6/site-packages/torch/utils/data/_utils/signal_handling.py", line 66, in handler
+    _error_if_any_worker_fails()
+RuntimeError: DataLoader worker (pid 27604) is killed by signal: Bus error. It is possible that dataloader's workers are out of shared memory. Please try to raise your shared memory limit.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/workspace/hover_net_immune_microenvironment/infer/wsi.py", line 746, in process_wsi_list
+    self.process_single_file(wsi_path, msk_path, self.output_dir)
+  File "/workspace/hover_net_immune_microenvironment/infer/wsi.py", line 550, in process_single_file
+    self.__get_raw_prediction(chunk_info_list, patch_info_list)
+  File "/workspace/hover_net_immune_microenvironment/infer/wsi.py", line 374, in __get_raw_prediction
+    chunk_patch_info_list[:, 0, 0], pbar_desc
+  File "/workspace/hover_net_immune_microenvironment/infer/wsi.py", line 287, in __run_model
+    for batch_idx, batch_data in enumerate(dataloader):
+  File "/opt/conda/envs/hovernet/lib/python3.6/site-packages/torch/utils/data/dataloader.py", line 363, in __next__
+    data = self._next_data()
+  File "/opt/conda/envs/hovernet/lib/python3.6/site-packages/torch/utils/data/dataloader.py", line 974, in _next_data
+    idx, data = self._get_data()
+  File "/opt/conda/envs/hovernet/lib/python3.6/site-packages/torch/utils/data/dataloader.py", line 941, in _get_data
+    success, data = self._try_get_data()
+  File "/opt/conda/envs/hovernet/lib/python3.6/site-packages/torch/utils/data/dataloader.py", line 792, in _try_get_data
+    raise RuntimeError('DataLoader worker (pid(s) {}) exited unexpectedly'.format(pids_str))
+RuntimeError: DataLoader worker (pid(s) 27604, 27979) exited unexpectedly
+|2023-03-08|16:36:21.365| [INFO] .... Detect #GPUS: 1
+|2023-03-08|16:36:26.377| [INFO] ................ Process: 2_6088_A_0037218
+|2023-03-08|16:36:26.392| [INFO] ................ WARNING: No mask found, generating mask via thresholding at 1.25x!
+|2023-03-08|16:36:28.877| [INFO] ........ Preparing Input Output Placement: 2.4987222959753126
+|2023-03-08|16:36:54.915| [ERROR] Crash
+Traceback (most recent call last):
+  File "/workspace/hover_net_immune_microenvironment/infer/wsi.py", line 746, in process_wsi_list
+    self.process_single_file(wsi_path, msk_path, self.output_dir)
+  File "/workspace/hover_net_immune_microenvironment/infer/wsi.py", line 550, in process_single_file
+    self.__get_raw_prediction(chunk_info_list, patch_info_list)
+  File "/workspace/hover_net_immune_microenvironment/infer/wsi.py", line 374, in __get_raw_prediction
+    chunk_patch_info_list[:, 0, 0], pbar_desc
+  File "/workspace/hover_net_immune_microenvironment/infer/wsi.py", line 289, in __run_model
+    sample_output_list = self.run_step(sample_data_list)
+  File "/workspace/hover_net_immune_microenvironment/infer/base.py", line 74, in <lambda>
+    self.run_step = lambda input_batch: run_step(input_batch, net)
+  File "/workspace/hover_net_immune_microenvironment/models/hovernet/run_desc.py", line 184, in infer_step
+    pred_dict = model(patch_imgs_gpu)
+  File "/opt/conda/envs/hovernet/lib/python3.6/site-packages/torch/nn/modules/module.py", line 722, in _call_impl
+    result = self.forward(*input, **kwargs)
+  File "/opt/conda/envs/hovernet/lib/python3.6/site-packages/torch/nn/parallel/data_parallel.py", line 153, in forward
+    return self.module(*inputs[0], **kwargs[0])
+  File "/opt/conda/envs/hovernet/lib/python3.6/site-packages/torch/nn/modules/module.py", line 722, in _call_impl
+    result = self.forward(*input, **kwargs)
+  File "/workspace/hover_net_immune_microenvironment/models/hovernet/net_desc.py", line 117, in forward
+    d1 = self.d1(d0)
+  File "/opt/conda/envs/hovernet/lib/python3.6/site-packages/torch/nn/modules/module.py", line 722, in _call_impl
+    result = self.forward(*input, **kwargs)
+  File "/workspace/hover_net_immune_microenvironment/models/hovernet/net_utils.py", line 262, in forward
+    new_feat = self.units[idx](new_feat)
+  File "/opt/conda/envs/hovernet/lib/python3.6/site-packages/torch/nn/modules/module.py", line 722, in _call_impl
+    result = self.forward(*input, **kwargs)
+  File "/opt/conda/envs/hovernet/lib/python3.6/site-packages/torch/nn/modules/container.py", line 117, in forward
+    input = module(input)
+  File "/opt/conda/envs/hovernet/lib/python3.6/site-packages/torch/nn/modules/module.py", line 722, in _call_impl
+    result = self.forward(*input, **kwargs)
+  File "/workspace/hover_net_immune_microenvironment/models/hovernet/net_utils.py", line 65, in forward
+    x = F.pad(x, padding, "constant", 0)
+  File "/opt/conda/envs/hovernet/lib/python3.6/site-packages/torch/nn/functional.py", line 3552, in _pad
+    return _VF.constant_pad_nd(input, pad, value)
+  File "/opt/conda/envs/hovernet/lib/python3.6/site-packages/torch/utils/data/_utils/signal_handling.py", line 66, in handler
+    _error_if_any_worker_fails()
+RuntimeError: DataLoader worker (pid 4995) is killed by signal: Bus error. It is possible that dataloader's workers are out of shared memory. Please try to raise your shared memory limit.
+|2023-03-08|16:37:27.915| [INFO] .... Detect #GPUS: 1
+|2023-03-08|16:37:32.983| [INFO] ................ Process: 2_6088_A_0037218
+|2023-03-08|16:37:32.998| [INFO] ................ WARNING: No mask found, generating mask via thresholding at 1.25x!
+|2023-03-08|16:37:35.475| [INFO] ........ Preparing Input Output Placement: 2.491140266880393
+|2023-03-08|16:37:57.134| [ERROR] Crash
+Traceback (most recent call last):
+  File "/opt/conda/envs/hovernet/lib/python3.6/site-packages/torch/utils/data/dataloader.py", line 779, in _try_get_data
+    data = self._data_queue.get(timeout=timeout)
+  File "/opt/conda/envs/hovernet/lib/python3.6/multiprocessing/queues.py", line 113, in get
+    return _ForkingPickler.loads(res)
+  File "/opt/conda/envs/hovernet/lib/python3.6/site-packages/torch/multiprocessing/reductions.py", line 282, in rebuild_storage_fd
+    fd = df.detach()
+  File "/opt/conda/envs/hovernet/lib/python3.6/multiprocessing/resource_sharer.py", line 57, in detach
+    with _resource_sharer.get_connection(self._id) as conn:
+  File "/opt/conda/envs/hovernet/lib/python3.6/multiprocessing/resource_sharer.py", line 87, in get_connection
+    c = Client(address, authkey=process.current_process().authkey)
+  File "/opt/conda/envs/hovernet/lib/python3.6/multiprocessing/connection.py", line 493, in Client
+    answer_challenge(c, authkey)
+  File "/opt/conda/envs/hovernet/lib/python3.6/multiprocessing/connection.py", line 732, in answer_challenge
+    message = connection.recv_bytes(256)         # reject large message
+  File "/opt/conda/envs/hovernet/lib/python3.6/multiprocessing/connection.py", line 216, in recv_bytes
+    buf = self._recv_bytes(maxlength)
+  File "/opt/conda/envs/hovernet/lib/python3.6/multiprocessing/connection.py", line 407, in _recv_bytes
+    buf = self._recv(4)
+  File "/opt/conda/envs/hovernet/lib/python3.6/multiprocessing/connection.py", line 379, in _recv
+    chunk = read(handle, remaining)
+  File "/opt/conda/envs/hovernet/lib/python3.6/site-packages/torch/utils/data/_utils/signal_handling.py", line 66, in handler
+    _error_if_any_worker_fails()
+RuntimeError: DataLoader worker (pid 6264) is killed by signal: Bus error. It is possible that dataloader's workers are out of shared memory. Please try to raise your shared memory limit.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/workspace/hover_net_immune_microenvironment/infer/wsi.py", line 746, in process_wsi_list
+    self.process_single_file(wsi_path, msk_path, self.output_dir)
+  File "/workspace/hover_net_immune_microenvironment/infer/wsi.py", line 550, in process_single_file
+    self.__get_raw_prediction(chunk_info_list, patch_info_list)
+  File "/workspace/hover_net_immune_microenvironment/infer/wsi.py", line 374, in __get_raw_prediction
+    chunk_patch_info_list[:, 0, 0], pbar_desc
+  File "/workspace/hover_net_immune_microenvironment/infer/wsi.py", line 287, in __run_model
+    for batch_idx, batch_data in enumerate(dataloader):
+  File "/opt/conda/envs/hovernet/lib/python3.6/site-packages/torch/utils/data/dataloader.py", line 363, in __next__
+    data = self._next_data()
+  File "/opt/conda/envs/hovernet/lib/python3.6/site-packages/torch/utils/data/dataloader.py", line 974, in _next_data
+    idx, data = self._get_data()
+  File "/opt/conda/envs/hovernet/lib/python3.6/site-packages/torch/utils/data/dataloader.py", line 941, in _get_data
+    success, data = self._try_get_data()
+  File "/opt/conda/envs/hovernet/lib/python3.6/site-packages/torch/utils/data/dataloader.py", line 792, in _try_get_data
+    raise RuntimeError('DataLoader worker (pid(s) {}) exited unexpectedly'.format(pids_str))
+RuntimeError: DataLoader worker (pid(s) 6264, 6507, 6567) exited unexpectedly
