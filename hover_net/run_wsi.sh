@@ -9,7 +9,7 @@ python run_infer.py \
 wsi \
 --input_dir=./dataset/wsi \
 --output_dir=./output/wsi \
-#--input_mask_dir=./dataset/mask \
+--save_mask \
 --save_thumb \
---save_mask
+
 

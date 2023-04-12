@@ -172,3 +172,14 @@ UnboundLocalError: local variable 'label' referenced before assignment
 |2023-04-12|15:14:43.429| [INFO] ................ Process: 2_6063_A_0045149
 |2023-04-12|15:14:43.443| [INFO] ................ WARNING: No mask found, generating mask via thresholding at 1.25x!
 |2023-04-12|15:14:44.496| [INFO] ........ Preparing Input Output Placement: 1.0661547599593177
+|2023-04-12|15:25:22.717| [INFO] .... Detect #GPUS: 1
+|2023-04-12|15:25:28.032| [INFO] ................ Skip: 2_6063_A_0045149
+|2023-04-12|15:28:38.392| [INFO] .... Detect #GPUS: 1
+|2023-04-12|15:28:43.703| [INFO] ................ Process: 2_4848_A_0039882
+|2023-04-12|15:28:43.723| [INFO] ................ WARNING: No mask found, generating mask via thresholding at 1.25x!
+|2023-04-12|15:28:48.608| [INFO] ........ Preparing Input Output Placement: 4.90413726400584
+|2023-04-12|15:43:41.095| [INFO] ........ Inference Time: 892.4846243229695
+|2023-04-12|15:44:07.254| [INFO] ........ Total Post Proc Time: 26.157381095923483
+|2023-04-12|15:44:10.282| [INFO] ........ Save Time: 3.0269493659725413
+|2023-04-12|15:44:10.283| [INFO] ................ Finish
+|2023-04-12|15:44:10.284| [INFO] ................ Skip: 2_6063_A_0045149
