@@ -158,3 +158,17 @@ RuntimeError: DataLoader worker (pid(s) 6264, 6507, 6567) exited unexpectedly
 |2023-04-12|02:43:12.801| [INFO] ........ Save Time: 5.336814057081938
 |2023-04-12|02:43:12.802| [INFO] ................ Finish
 |2023-04-12|14:57:20.878| [INFO] .... Detect #GPUS: 0
+|2023-04-12|15:13:01.640| [INFO] .... Detect #GPUS: 1
+|2023-04-12|15:13:06.922| [INFO] ................ Process: 2_6063_A_0045149
+|2023-04-12|15:13:06.936| [INFO] ................ WARNING: No mask found, generating mask via thresholding at 1.25x!
+|2023-04-12|15:13:07.953| [ERROR] Crash
+Traceback (most recent call last):
+  File "/workspace/spatial_characterization/hover_net/infer/wsi.py", line 758, in process_wsi_list
+    self.process_single_file(wsi_path, msk_path, self.output_dir)
+  File "/workspace/spatial_characterization/hover_net/infer/wsi.py", line 503, in process_single_file
+    label_img = label(self.wsi_mask)
+UnboundLocalError: local variable 'label' referenced before assignment
+|2023-04-12|15:14:38.065| [INFO] .... Detect #GPUS: 1
+|2023-04-12|15:14:43.429| [INFO] ................ Process: 2_6063_A_0045149
+|2023-04-12|15:14:43.443| [INFO] ................ WARNING: No mask found, generating mask via thresholding at 1.25x!
+|2023-04-12|15:14:44.496| [INFO] ........ Preparing Input Output Placement: 1.0661547599593177

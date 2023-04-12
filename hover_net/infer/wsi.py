@@ -484,6 +484,7 @@ class InferManager(base.InferManager):
             )
 
             from skimage import morphology
+            from skimage.measure import label, regionprops
 
             # simple method to extract tissue regions using intensity thresholding and morphological operations
             def simple_get_mask():
@@ -504,9 +505,9 @@ class InferManager(base.InferManager):
             regions = regionprops(label_img) 
             areas = [prop.area for prop in regions]
             largest_comp = areas.index(max(areas))      
-            label = regions[largest_comp].label
-            mask = np.zeros(img.shape[:2], dtype=np.uint8)
-            mask[label_img == label] = 1
+            labeli = regions[largest_comp].label
+            mask = np.zeros(label_img.shape[:2], dtype=np.uint8)
+            mask[label_img == labeli] = 1
             self.wsi_mask = mask
 
 
