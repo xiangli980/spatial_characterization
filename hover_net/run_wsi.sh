@@ -8,7 +8,7 @@ python run_infer.py \
 --nr_post_proc_workers=16 \
 wsi \
 --input_dir=./dataset/wsi \
---output_dir=./output/wsis \
---input_mask_dir=./output/wsis/mask \
+--output_dir=./output/wsi \
+--input_mask_dir=./dataset/mask \
 --save_thumb \
 ##--save_mask

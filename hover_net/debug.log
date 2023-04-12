@@ -144,3 +144,16 @@ RuntimeError: DataLoader worker (pid(s) 6264, 6507, 6567) exited unexpectedly
 |2023-04-11|20:16:38.659| [INFO] .... Detect #GPUS: 1
 |2023-04-11|20:17:06.928| [INFO] .... Detect #GPUS: 1
 |2023-04-11|20:17:33.015| [INFO] ........................ Done Assembling Case 12_p7
+|2023-04-12|01:54:05.158| [INFO] .... Detect #GPUS: 1
+|2023-04-12|01:54:05.303| [INFO] Generating new fontManager, this may take some time...
+|2023-04-12|01:55:08.948| [INFO] .... Detect #GPUS: 1
+|2023-04-12|01:59:23.410| [INFO] .... Detect #GPUS: 1
+|2023-04-12|02:03:49.492| [INFO] .... Detect #GPUS: 1
+|2023-04-12|02:04:16.452| [INFO] ........................ Done Assembling Case 12_p7
+|2023-04-12|02:08:01.052| [INFO] .... Detect #GPUS: 1
+|2023-04-12|02:08:06.363| [INFO] ................ Process: 2_6063_A_0045149
+|2023-04-12|02:08:07.002| [INFO] ........ Preparing Input Output Placement: 0.6385955270379782
+|2023-04-12|02:42:21.965| [INFO] ........ Inference Time: 2054.9607984829927
+|2023-04-12|02:43:07.463| [INFO] ........ Total Post Proc Time: 45.496130433049984
+|2023-04-12|02:43:12.801| [INFO] ........ Save Time: 5.336814057081938
+|2023-04-12|02:43:12.802| [INFO] ................ Finish
