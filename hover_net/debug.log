@@ -157,3 +157,4 @@ RuntimeError: DataLoader worker (pid(s) 6264, 6507, 6567) exited unexpectedly
 |2023-04-12|02:43:07.463| [INFO] ........ Total Post Proc Time: 45.496130433049984
 |2023-04-12|02:43:12.801| [INFO] ........ Save Time: 5.336814057081938
 |2023-04-12|02:43:12.802| [INFO] ................ Finish
+|2023-04-12|14:57:20.878| [INFO] .... Detect #GPUS: 0

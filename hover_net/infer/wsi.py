@@ -495,10 +495,22 @@ class InferManager(base.InferManager):
                     mask == 0, min_size=16 * 16, connectivity=2
                 )
                 mask = morphology.remove_small_holes(mask, area_threshold=128 * 128)
-                mask = morphology.binary_dilation(mask, morphology.disk(16))
+                mask = morphology.binary_dilation(mask, morphology.disk(10)) # change from 16 to 10
                 return mask
 
             self.wsi_mask = np.array(simple_get_mask() > 0, dtype=np.uint8)
+            # find a largest component to compute
+            label_img = label(self.wsi_mask)
+            regions = regionprops(label_img) 
+            areas = [prop.area for prop in regions]
+            largest_comp = areas.index(max(areas))      
+            label = regions[largest_comp].label
+            mask = np.zeros(img.shape[:2], dtype=np.uint8)
+            mask[label_img == label] = 1
+            self.wsi_mask = mask
+
+
+
         if np.sum(self.wsi_mask) == 0:
             log_info("Skip due to empty mask!")
             return
