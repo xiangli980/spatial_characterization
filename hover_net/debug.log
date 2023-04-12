@@ -183,3 +183,65 @@ UnboundLocalError: local variable 'label' referenced before assignment
 |2023-04-12|15:44:10.282| [INFO] ........ Save Time: 3.0269493659725413
 |2023-04-12|15:44:10.283| [INFO] ................ Finish
 |2023-04-12|15:44:10.284| [INFO] ................ Skip: 2_6063_A_0045149
+|2023-04-12|17:57:24.669| [INFO] .... Detect #GPUS: 1
+|2023-04-12|17:57:29.968| [INFO] ................ Process: 2_4998_A_0043238
+|2023-04-12|17:57:30.638| [INFO] ................ WARNING: No mask found, generating mask via thresholding at 1.25x!
+|2023-04-12|17:57:37.343| [INFO] ........ Preparing Input Output Placement: 7.373577046091668
+|2023-04-12|18:20:59.592| [INFO] ........ Inference Time: 1402.2477112899069
+|2023-04-12|18:21:25.878| [INFO] ........ Total Post Proc Time: 26.284378796932288
+|2023-04-12|18:21:28.656| [INFO] ........ Save Time: 2.7772833339404315
+|2023-04-12|18:21:28.657| [INFO] ................ Finish
+|2023-04-12|18:21:28.657| [INFO] ................ Process: 2_6128_A_0037275
+|2023-04-12|18:21:29.130| [INFO] ................ WARNING: No mask found, generating mask via thresholding at 1.25x!
+|2023-04-12|18:21:35.602| [INFO] ........ Preparing Input Output Placement: 6.94463640905451
+|2023-04-12|18:47:51.918| [INFO] ........ Inference Time: 1576.3143078250578
+|2023-04-12|18:48:14.095| [INFO] ........ Total Post Proc Time: 22.174211162957363
+|2023-04-12|18:48:14.570| [INFO] ........ Save Time: 0.474250171915628
+|2023-04-12|18:48:14.571| [INFO] ................ Finish
+|2023-04-12|18:48:14.572| [INFO] ................ Process: 2_6155_A_0038803
+|2023-04-12|18:48:15.233| [INFO] ................ WARNING: No mask found, generating mask via thresholding at 1.25x!
+|2023-04-12|18:48:21.816| [INFO] ........ Preparing Input Output Placement: 7.243634234997444
+|2023-04-12|18:56:29.587| [INFO] ........ Inference Time: 487.76935576903634
+|2023-04-12|18:56:50.107| [INFO] ........ Total Post Proc Time: 20.518045605975203
+|2023-04-12|18:56:52.085| [INFO] ........ Save Time: 1.9781294140266255
+|2023-04-12|18:56:52.086| [INFO] ................ Finish
+|2023-04-12|18:56:52.086| [INFO] ................ Process: 2_6223_A_0043223
+|2023-04-12|18:56:52.725| [INFO] ................ WARNING: No mask found, generating mask via thresholding at 1.25x!
+|2023-04-12|18:56:58.422| [INFO] ........ Preparing Input Output Placement: 6.335124226985499
+|2023-04-12|19:14:25.016| [INFO] ........ Inference Time: 1046.593305823044
+|2023-04-12|19:14:50.052| [INFO] ........ Total Post Proc Time: 25.03387251100503
+|2023-04-12|19:14:52.635| [INFO] ........ Save Time: 2.5816195119405165
+|2023-04-12|19:14:52.636| [INFO] ................ Finish
+|2023-04-12|20:02:48.374| [INFO] .... Detect #GPUS: 1
+|2023-04-12|20:03:30.132| [INFO] .... Detect #GPUS: 1
+|2023-04-12|20:03:56.388| [INFO] .... Detect #GPUS: 1
+|2023-04-12|20:06:40.033| [INFO] .... Detect #GPUS: 1
+|2023-04-12|20:06:45.343| [INFO] ................ Process: 2_6128_A_0037275
+|2023-04-12|20:06:45.837| [INFO] ................ WARNING: No mask found, generating mask via thresholding at 1.25x!
+|2023-04-12|20:06:48.834| [ERROR] Crash
+Traceback (most recent call last):
+  File "/workspace/spatial_characterization/hover_net/infer/wsi.py", line 768, in process_wsi_list
+    self.process_single_file(wsi_path, msk_path, self.output_dir)
+  File "/workspace/spatial_characterization/hover_net/infer/wsi.py", line 510, in process_single_file
+    for ii, area in enumarate(areas):
+NameError: name 'enumarate' is not defined
+|2023-04-12|20:07:05.090| [INFO] .... Detect #GPUS: 1
+|2023-04-12|20:07:10.447| [INFO] ................ Process: 2_6128_A_0037275
+|2023-04-12|20:07:10.916| [INFO] ................ WARNING: No mask found, generating mask via thresholding at 1.25x!
+|2023-04-12|20:07:16.221| [INFO] ........ Preparing Input Output Placement: 5.77336456393823
+|2023-04-12|20:10:49.431| [INFO] .... Detect #GPUS: 1
+|2023-04-12|20:10:54.790| [INFO] ................ Process: 2_6128_A_0037275
+|2023-04-12|20:10:55.260| [INFO] ................ WARNING: No mask found, generating mask via thresholding at 1.25x!
+|2023-04-12|20:11:00.482| [INFO] ........ Preparing Input Output Placement: 5.691514316946268
+|2023-04-12|20:11:57.166| [INFO] .... Detect #GPUS: 1
+|2023-04-12|20:12:02.472| [INFO] ................ Process: 2_6128_A_0037275
+|2023-04-12|20:12:02.954| [INFO] ................ WARNING: No mask found, generating mask via thresholding at 1.25x!
+|2023-04-12|20:12:08.206| [INFO] ........ Preparing Input Output Placement: 5.733237193082459
+|2023-04-12|20:13:09.051| [INFO] .... Detect #GPUS: 1
+|2023-04-12|20:13:14.525| [INFO] ................ Process: 2_6128_A_0037275
+|2023-04-12|20:13:14.991| [INFO] ................ WARNING: No mask found, generating mask via thresholding at 1.25x!
+|2023-04-12|20:13:20.021| [INFO] ........ Preparing Input Output Placement: 5.494303409010172
+|2023-04-12|20:29:02.744| [INFO] ........ Inference Time: 942.7221759869717
+|2023-04-12|20:29:33.557| [INFO] ........ Total Post Proc Time: 30.812843860010616
+|2023-04-12|20:29:38.329| [INFO] ........ Save Time: 4.771175623987801
+|2023-04-12|20:29:38.330| [INFO] ................ Finish

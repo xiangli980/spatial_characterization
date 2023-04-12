@@ -504,7 +504,24 @@ class InferManager(base.InferManager):
             label_img = label(self.wsi_mask)
             regions = regionprops(label_img) 
             areas = [prop.area for prop in regions]
-            largest_comp = areas.index(max(areas))      
+            # print(areas)
+            # # find the second largest component
+            # target = 0
+            # largest_comp = areas.index(max(areas))   
+            # for ii, area in enumerate(areas):
+            #     if area==max(areas):
+            #         continue
+            #     if area>target:
+            #         target = area
+            #         largest_comp = ii
+            # target1 = 0
+            # for ii, area in enumerate(areas):
+            #     if area==target or area==max(areas):
+            #         continue
+            #     if area>target1:
+            #         target1 = area
+            #         largest_comp = ii
+            largest_comp = areas.index(max(areas))
             labeli = regions[largest_comp].label
             mask = np.zeros(label_img.shape[:2], dtype=np.uint8)
             mask[label_img == labeli] = 1

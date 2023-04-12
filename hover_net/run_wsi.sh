@@ -7,9 +7,8 @@ python run_infer.py \
 --nr_inference_workers=8 \
 --nr_post_proc_workers=16 \
 wsi \
---input_dir= /DataMount/test0412 \
+--input_dir=/DataMount/CureGN/test1 \
 --output_dir=./output/wsi \
 --save_mask \
 --save_thumb \
-
 
