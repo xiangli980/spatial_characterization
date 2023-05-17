@@ -6,6 +6,9 @@ cache/
 dataset/
 output/
 logs/
+data_*/
+output_*/
+debug.log
 
 # checkpoint paths
 *.npz
