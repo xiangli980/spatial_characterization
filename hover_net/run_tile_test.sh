@@ -1,5 +1,5 @@
 python run_infer.py \
---gpu='1' \
+--gpu='0' \
 --nr_types=3 \
 --type_info_path=type_info.json \
 --model_mode=original \
@@ -7,7 +7,7 @@ python run_infer.py \
 --nr_inference_workers=8 \
 --nr_post_proc_workers=16 \
 tile \
---input_dir=./data_4mouse \
---output_dir=./output_4mouse \
+--input_dir=./data_geomix/images/case2 \
+--output_dir=./output_geomix/case2 \
 
 
